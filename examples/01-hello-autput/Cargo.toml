@@ -10,4 +10,4 @@ path = "src-rust/main.rs"
 
 [dependencies]
 autput = { path = "../../rust" }
-serde = { version = "1.0.203", features = ["derive"] }
+log = "0.4.21"

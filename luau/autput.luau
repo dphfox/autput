@@ -97,7 +97,7 @@ local STD_LOG: LogFn =
 
 local extern_fn = {}
 
-function extern_fn.autput_log(
+function extern_fn.log(
 	api_state: ApiState,
 	level_ord: u8,
 	ptr: ptr_const_u8,
@@ -114,7 +114,7 @@ function extern_fn.autput_log(
 	api_state.log_fn(log_level :: LogLevel, message)
 end
 
-function extern_fn.autput_panic(
+function extern_fn.panic(
 	api_state: ApiState,
 	ptr: ptr_const_u8,
 	len: u32
