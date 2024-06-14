@@ -20,6 +20,16 @@ from Rust. You need only initialise Autput, and all the relevant panic handling
 and printing features are turned on for you automatically, so you can get to
 work right away.
 
+```Rust
+fn main() {
+	autput::connect();
+	info!("This is an info message.");
+	warn!("This is a warning message.");
+	error!("This is an error message.");
+	panic!("This is a panic.");
+}
+```
+
 - Compatible with the `log` crate
 - Send to `print()`, `warn()` (Roblox only), or your own Luau log functions
 - Rust panics are redirected to Luau's `error()`
