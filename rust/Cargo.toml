@@ -7,7 +7,7 @@ description = "Log Rust prints and panics to Luau for easy debugging."
 repository = "https://github.com/dphfox/autput"
 license = "MIT"
 keywords = ["roblox", "wasm", "wasynth", "lua", "luau"]
-categories = ["wasm", "encoding", "development-tools::ffi"]
+categories = ["wasm", "development-tools::debugging"]
 
 [lib]
 name = "autput"
