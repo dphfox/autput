@@ -1,0 +1,16 @@
+[package]
+name = "autput"
+version = "0.1.0"
+authors = ["Daniel P H Fox <danielphfox@gmail.com>"]
+edition = "2021"
+description = "Log Rust prints and panics to Luau for easy debugging."
+repository = "https://github.com/dphfox/autput"
+license = "MIT"
+keywords = ["roblox", "wasm", "wasynth", "lua", "luau"]
+categories = ["wasm", "encoding", "development-tools::ffi"]
+
+[lib]
+name = "autput"
+
+[dependencies]
+log = "0.4.21"

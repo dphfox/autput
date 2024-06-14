@@ -1,0 +1,13 @@
+[package]
+name = "hello-autput"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "example_wasm"
+path = "src-rust/main.rs"
+
+[dependencies]
+autput = { path = "../../rust" }
+serde = { version = "1.0.203", features = ["derive"] }

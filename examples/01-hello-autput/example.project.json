@@ -1,0 +1,30 @@
+{
+	"name": "Hello Lingua",
+	"tree": {
+		"$className": "DataModel",
+
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+
+			"hello_lingua": {
+				"$className": "Folder",
+
+				"src_luau": {
+					"$path": "src-luau"
+				},
+
+				"target_luau": {
+					"$className": "Folder",
+
+					"example_wasm": {
+						"$path": "target-luau/example_wasm.luau"
+					}
+				},
+
+				"autput": {
+					"$path": "../../luau/autput.luau"
+				}
+			}
+		}
+	}
+}

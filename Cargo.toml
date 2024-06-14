@@ -1,0 +1,6 @@
+[workspace]
+members = [
+	"rust",
+	"examples/01-hello-autput"
+]
+resolver = "2"
