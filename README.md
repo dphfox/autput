@@ -24,6 +24,15 @@ work right away.
 - Send to `print()`, `warn()` (Roblox only), or your own Luau log functions
 - Rust panics are redirected to Luau's `error()`
 
+## A note about `println!`
+
+It isn't possible to redirect where standard output goes in Rust. As a result,
+Autput can't restore `println!()` functionality, or other similar hardcoded
+printing procedures.
+
+Instead, you should use the `log` crate and its macros: `info!()`, `warn!()`
+etc.
+
 ## Contributions and maintenance
 
 This is [a certified Daniel P H Fox Side Project™](https://fluff.blog/2024/04/10/i-dont-want-to-be-a-maintainer.html), which I am sharing because I personally wanted it to exist in the world. I might maintain it. I might not.

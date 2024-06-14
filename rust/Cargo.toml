@@ -13,4 +13,4 @@ categories = ["wasm", "development-tools::debugging"]
 name = "autput"
 
 [dependencies]
-log = "0.4.21"
+log = { version = "0.4.21", features = ["std"] }
