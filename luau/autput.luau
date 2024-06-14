@@ -149,17 +149,16 @@ end
 
 local autput = {}
 
--- Autput needs to register
--- its own extern functions into the WASM environment, and secondly, it needs to
--- obtain a reference to the WASM module so that it can invoke functions that
--- exist in the WASM runtime. Once both have been received, you will receive an
--- `Api` that you can use with the provided module.
+-- Autput needs to register its own extern functions into the WASM environment, 
+-- and it needs to obtain a reference to the WASM module so that it can invoke 
+-- functions that exist in the WASM runtime. Once both have been received, you 
+-- will receive an `Api` that you can use with the provided module.
 function autput.init(
 	env: WasmEnvironment
 )
 	local api_state: ApiState? = nil
 	for fn_name, fn in pairs(extern_fn) do
-		env.func_list["autput"..fn_name] = function(...)
+		env.func_list["autput_"..fn_name] = function(...)
 			if api_state == nil then
 				print("[autput] api not initialised yet on luau side - cannot handle incoming data")
 				return

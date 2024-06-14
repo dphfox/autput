@@ -5,8 +5,6 @@ use log::{debug, error, info, trace, warn};
 
 fn main() {
 	autput::connect();
-	trace!("This is a trace message.");
-	debug!("This is a debug message.");
 	info!("This is an info message.");
 	warn!("This is a warning message.");
 	error!("This is an error message.");

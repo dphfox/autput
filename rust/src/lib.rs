@@ -20,7 +20,7 @@ extern "C" {
 fn set_panic_hook() {
 	panic::set_hook(
 		Box::new(|panic| {
-			let message = format!("{panic:?}");
+			let message = format!("{panic}");
 			unsafe {
 				autput_panic(
 					message.as_ptr(),
@@ -35,7 +35,7 @@ pub fn connect_with(
 	logger: Autput
 ) {
 	self::set_panic_hook();
-	logger.connect().expect("Error while connecting Autput logger (don't call connect() more than once - have you tried connect_once() instead?)");
+	logger.connect().expect("There was an error connecting Autput to `log` on the Rust side.");
 }
 
 pub fn connect_once_with<T: FnOnce() -> Autput>(

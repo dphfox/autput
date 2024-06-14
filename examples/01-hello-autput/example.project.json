@@ -1,12 +1,12 @@
 {
-	"name": "Hello Lingua",
+	"name": "Hello Autput",
 	"tree": {
 		"$className": "DataModel",
 
 		"ServerScriptService": {
 			"$className": "ServerScriptService",
 
-			"hello_lingua": {
+			"hello_autput": {
 				"$className": "Folder",
 
 				"src_luau": {
