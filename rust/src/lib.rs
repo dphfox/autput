@@ -1,4 +1,4 @@
-use std::panic;
+use std::{panic, cell::RefCell};
 
 use log::{Level, LevelFilter, Log, SetLoggerError};
 
@@ -35,11 +35,30 @@ pub fn connect_with(
 	logger: Autput
 ) {
 	self::set_panic_hook();
-	logger.connect().expect("Error while connecting Autput logger");
+	logger.connect().expect("Error while connecting Autput logger (don't call connect() more than once - have you tried connect_once() instead?)");
+}
+
+pub fn connect_once_with<T: FnOnce() -> Autput>(
+	make_logger: T
+) {
+	thread_local! {
+		static CONNECTED: RefCell<bool> = RefCell::new(false);
+	}
+	CONNECTED.with_borrow_mut(|is_connected| {
+		if *is_connected {
+			return;
+		}
+		connect_with(make_logger());
+		*is_connected = true;
+	})
 }
 
 pub fn connect() {
 	connect_with(Autput::default())
+}
+
+pub fn connect_once() {
+	connect_once_with(Autput::default)
 }
 
 pub struct Autput {
