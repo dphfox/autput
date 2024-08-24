@@ -7,7 +7,9 @@ Log Rust prints and panics to Luau for easy debugging.
 
 ## Install
 
-WIP
+```
+cargo add autput
+```
 
 ## Brief
 
