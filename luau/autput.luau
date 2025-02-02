@@ -1,5 +1,5 @@
 --!strict
---Licensed under MIT from Autput, (c) Daniel P H Fox 2024
+--Licensed under BSD3 from Autput, (c) Daniel P H Fox 2025
 
 --------------------------------------------------------------------------------
 -- TYPE DEFINITIONS ------------------------------------------------------------
